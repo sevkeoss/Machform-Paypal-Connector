@@ -28,8 +28,8 @@ def run():
         read_paypal_data()
         read_payment_data()
         find_non_matches()
-        write_data(np.array(['', '', '', '', "{0:.2f}".format(grand_gross_total), "{0:.2f}".format(grand_fee_total),
-                             "{0:.2f}".format(grand_net_total)]))
+        write_data(np.array(['', '', '', '', "{0:,.2f}".format(grand_gross_total), "{0:,.2f}".format(grand_fee_total),
+                             "{0:,.2f}".format(grand_net_total)]))
 
 
 def output_file_exists():
@@ -89,8 +89,8 @@ def find_matches():
                 break
 
     update_grand_totals(gross_total, fee_total, net_total)
-    write_data(['', '', '', '', "{0:.2f}".format(gross_total), "{0:.2f}".format(fee_total),
-                "{0:.2f}".format(net_total)])
+    write_data(['', '', '', '', "{0:,.2f}".format(gross_total), "{0:,.2f}".format(fee_total),
+                "{0:,.2f}".format(net_total)])
 
     for element in elements_removal:
         paypal_id_col.remove(element)
@@ -109,8 +109,8 @@ def find_non_matches():
         gross_total, fee_total, net_total = update_totals(data, gross_total, fee_total, net_total)
         write_data(np.array(['**NO MATCH**', paypal_id, data[0], data[4], data[5], data[6], data[7], data[11]]))
 
-    write_data(np.array(['', '', '', '', "{0:.2f}".format(gross_total), "{0:.2f}".format(fee_total),
-                         "{0:.2f}".format(net_total)]))
+    write_data(np.array(['', '', '', '', "{0:,.2f}".format(gross_total), "{0:,.2f}".format(fee_total),
+                         "{0:,.2f}".format(net_total)]))
     update_grand_totals(gross_total, fee_total, net_total)
 
 
