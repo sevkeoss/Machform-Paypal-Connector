@@ -1,6 +1,6 @@
 Installation Instructions (Mac):
 
-1. Install latest version of python 3 (https://www.python.org/downloads/)
+1. Install latest version of python 3 using executable installer (https://www.python.org/downloads/)
 
 2. Download zip file from GitHub (https://github.com/skeossei/Pilibos_Project) and save file to Desktop
 
