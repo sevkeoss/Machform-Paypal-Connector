@@ -16,7 +16,9 @@ Installation Instructions (Mac):
 
 8. Run "pip install numpy"
 
-9. Run "python3 machform_paypal_matcher.py" on command line
+9. Add other csv files (PayPal.csv, GraduationFee.csv, etc...)
+
+10. Run "python3 machform_paypal_matcher.py" on command line
 
 
 Installation Instructions (Windows):
@@ -37,4 +39,6 @@ Installation Instructions (Windows):
 
 8. Run "pip install numpy"
 
-9. Run "py -3 machform_paypal_matcher"
+9. Add other csv files (PayPal.csv, GraduationFee.csv, etc...)
+
+10. Run "py -3 machform_paypal_matcher.py"
