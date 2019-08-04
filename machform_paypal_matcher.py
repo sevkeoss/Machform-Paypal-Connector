@@ -43,7 +43,7 @@ def read_payment_data():
     payment_files = glob.glob(curr_path + '/*.csv')
     for payment_file in payment_files:
         if payment_file != (curr_path + '/PayPal.csv'):
-            with open(payment_file, 'r') as p_file:
+            with open(payment_file, 'r', encoding='ISO-8859-1') as p_file:
                 next(p_file)
                 reader = csv.reader(p_file, delimiter=',')
                 for row in reader:
@@ -56,7 +56,7 @@ def read_payment_data():
 def read_paypal_data():
     global paypal_id_col
 
-    with open('PayPal.csv', 'r') as paypal_file:
+    with open('PayPal.csv', 'r', encoding='ISO-8859-1') as paypal_file:
         next(paypal_file)
         reader = csv.reader(paypal_file, delimiter=',')
         for row in reader:
@@ -94,7 +94,6 @@ def find_matches():
 
     for element in elements_removal:
         paypal_id_col.remove(element)
-        id_list.remove(element)
 
 
 def find_non_matches():
@@ -109,9 +108,9 @@ def find_non_matches():
         gross_total, fee_total, net_total = update_totals(data, gross_total, fee_total, net_total)
         write_data(np.array(['**NO MATCH**', paypal_id, data[0], data[4], data[5], data[6], data[7], data[11]]))
 
+    update_grand_totals(gross_total, fee_total, net_total)
     write_data(np.array(['', '', '', '', "{0:,.2f}".format(gross_total), "{0:,.2f}".format(fee_total),
                          "{0:,.2f}".format(net_total)]))
-    update_grand_totals(gross_total, fee_total, net_total)
 
 
 def update_totals(data, gross_total, fee_total, net_total):
@@ -135,7 +134,7 @@ def update_grand_totals(gross_total, fee_total, net_total):
 def write_data(data):
     global writer
 
-    with open('Financial Output File.csv', 'a') as writeFile:
+    with open('Financial Output File.csv', 'a', encoding='ISO-8859-1') as writeFile:
         writer = csv.writer(writeFile, lineterminator='\r')
         writer.writerow(data)
 
