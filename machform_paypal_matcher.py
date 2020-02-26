@@ -24,7 +24,6 @@ def run():
         print("ERROR: Financial Output File.csv already exists. Please delete it before running this program.")
         return
     else:
-        write_data(output_header)
         read_paypal_data()
         read_payment_data()
         find_non_matches()
@@ -41,12 +40,15 @@ def read_payment_data():
 
     curr_path = os.getcwd()
     payment_files = glob.glob(curr_path + '/*.csv')
+    write_data(output_header)
     for payment_file in payment_files:
         if payment_file != (curr_path + '/PayPal.csv'):
             with open(payment_file, 'r', encoding='ISO-8859-1') as p_file:
                 next(p_file)
                 reader = csv.reader(p_file, delimiter=',')
                 for row in reader:
+                    if len(row) == 0:
+                        continue
                     id_list.append(row[6])
                     payment_dict.update({row[6]: row})
             find_matches()
@@ -60,6 +62,8 @@ def read_paypal_data():
         next(paypal_file)
         reader = csv.reader(paypal_file, delimiter=',')
         for row in reader:
+            if len(row) == 0:
+                continue
             paypal_dict.update({row[9]: np.array(row)})
             paypal_id_col.append(row[9])
     paypal_id_col.sort()
