@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2b2b5d5-9f2a-4c1c-b883-948301a3743f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machform_paypal_matcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/machform_paypal_matcher.py" afterDir="false" />
-    </list>
+    <list default="true" id="d2b2b5d5-9f2a-4c1c-b883-948301a3743f" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +17,8 @@
       <file leaf-file-name="machform_paypal_matcher.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/machform_paypal_matcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
+            <state relative-caret-position="250">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -42,7 +39,7 @@
     <findStrings>
       <find>Total</find>
       <find>Hello</find>
-      <find>Going in</find>
+      <find />
       <find>G</find>
       <find>True</find>
       <find>48S24454PC523862M</find>
@@ -174,13 +171,14 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.33970588" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32794118" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32794118" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28271407" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -188,7 +186,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32941177" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,24 +196,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/machform_paypal_matcher.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/machform_paypal_matcher.py</url>
-          <line>62</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint suspend="NONE" type="python-exception">
           <properties exception="BaseException" />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -277,10 +262,8 @@
     <entry file="file://$PROJECT_DIR$/PayPal.csv" />
     <entry file="file://$PROJECT_DIR$/Financial Output File.csv" />
     <entry file="file://$PROJECT_DIR$/RegistrationSample.csv" />
-    <entry file="file://$PROJECT_DIR$/GraduationFee.csv" />
     <entry file="file://$PROJECT_DIR$/Financial Output File Temp.csv" />
     <entry file="file://$PROJECT_DIR$/Yearbook.csv" />
-    <entry file="file://$PROJECT_DIR$/Financial Output File.csv" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -300,10 +283,22 @@
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GraduationFee.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Financial Output File.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/machform_paypal_matcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        <state relative-caret-position="250">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
