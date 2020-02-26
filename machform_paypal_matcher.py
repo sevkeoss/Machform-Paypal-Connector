@@ -47,6 +47,8 @@ def read_payment_data():
                 next(p_file)
                 reader = csv.reader(p_file, delimiter=',')
                 for row in reader:
+                    if len(row) == 0:
+                        continue
                     id_list.append(row[6])
                     payment_dict.update({row[6]: row})
             find_matches()
@@ -60,6 +62,8 @@ def read_paypal_data():
         next(paypal_file)
         reader = csv.reader(paypal_file, delimiter=',')
         for row in reader:
+            if len(row) == 0:
+                continue
             paypal_dict.update({row[9]: np.array(row)})
             paypal_id_col.append(row[9])
     paypal_id_col.sort()
