@@ -47,7 +47,7 @@ def read_payment_data():
                 next(p_file)
                 reader = csv.reader(p_file, delimiter=',')
                 for row in reader:
-                    if len(row) == 0:
+                    if len(row) == 0 or row[6] == '':
                         continue
                     id_list.append(row[6])
                     payment_dict.update({row[6]: row})
@@ -64,8 +64,8 @@ def read_paypal_data():
         for row in reader:
             if len(row) == 0:
                 continue
-            paypal_dict.update({row[9]: np.array(row)})
-            paypal_id_col.append(row[9])
+            paypal_dict.update({row[12]: np.array(row)})
+            paypal_id_col.append(row[12])
     paypal_id_col.sort()
 
 
@@ -118,9 +118,9 @@ def find_non_matches():
 
 
 def update_totals(data, gross_total, fee_total, net_total):
-    gross_total = gross_total + float(data[5].replace(',', ''))
-    fee_total = fee_total + float(data[6].replace(',', ''))
-    net_total = net_total + float(data[7].replace(',', ''))
+    gross_total = gross_total + float(data[7].replace(',', ''))
+    fee_total = fee_total + float(data[8].replace(',', ''))
+    net_total = net_total + float(data[9].replace(',', ''))
 
     return gross_total, fee_total, net_total
 
