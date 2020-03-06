@@ -87,8 +87,8 @@ def find_matches():
                 gross_total, fee_total, net_total = update_totals(paypal_data, gross_total, fee_total, net_total)
 
                 misc_data = np.char.split(payment_data[8:], ',')
-                write_data(np.array([payment_data[7], payment_data[6], paypal_data[0], paypal_data[4], paypal_data[5],
-                                     paypal_data[6], paypal_data[7], paypal_data[11], *(col[0] for col in misc_data)]))
+                write_data(np.array([payment_data[7], payment_data[6], paypal_data[0], paypal_data[6], paypal_data[7],
+                                     paypal_data[8], paypal_data[9], paypal_data[3], *(col[0] for col in misc_data)]))
                 elements_removal.append(id)
                 break
 
@@ -110,7 +110,7 @@ def find_non_matches():
     for paypal_id in paypal_id_col:
         data = paypal_dict.get(paypal_id)
         gross_total, fee_total, net_total = update_totals(data, gross_total, fee_total, net_total)
-        write_data(np.array(['**NO MATCH**', paypal_id, data[0], data[4], data[5], data[6], data[7], data[11]]))
+        write_data(np.array(['**NO MATCH**', paypal_id, data[0], data[6], data[7], data[8], data[9], data[3]]))
 
     update_grand_totals(gross_total, fee_total, net_total)
     write_data(np.array(['', '', '', '', "{0:,.2f}".format(gross_total), "{0:,.2f}".format(fee_total),
